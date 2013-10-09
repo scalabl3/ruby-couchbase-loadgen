@@ -61,7 +61,7 @@ data = { random_text: random_text }
 # Create 100K items, add time stamp and item # as json data (Hash)
 # Read 0%, Write 100%
 #
-puts "Phase 1 --- Create 100,000 items... Read 0%, Write 100%"
+puts "Phase 1 --- Read   0%, Write 100% --- Create 100,000 items..."
 100000.times do |i|
   data[:item] = i
   data[:created_at] = Time.now.utc.to_i
@@ -90,7 +90,7 @@ end
 current_count = C.get("itemcount") if USE_ATOMIC_COUNTER_FOR_CREATE
 current_count = 100000 unless USE_ATOMIC_COUNTER_FOR_CREATE
 
-puts "Phase 2 --- Create 100,000 items, Get & Replace 100,000 items... Read 33%, Write 66%"
+puts "Phase 2 --- Read  33%, Write  66% --- Create 100,000 items, Get & Replace 100,000 items..."
 100000.times do |i|
 
   # get a random item and replace it, add an updated_at json key (Hash Key)
@@ -130,7 +130,7 @@ end
 current_count = C.get("itemcount") if USE_ATOMIC_COUNTER_FOR_CREATE
 current_count = 200000 unless USE_ATOMIC_COUNTER_FOR_CREATE
 
-puts "Phase 3 --- Get 100,000 items, Get & Replace 100,000 items, Create 100,000 items... Read 33%, Write 66%"
+puts "Phase 3 --- Read  33%, Write  66% --- Get 100,000 items, Get & Replace 100,000 items, Create 100,000 items..."
 100000.times do |i|
 
   key = "item::#{rand(current_count) + 1}"
@@ -171,7 +171,7 @@ end
 current_count = C.get("itemcount") if USE_ATOMIC_COUNTER_FOR_CREATE
 current_count = 300000 unless USE_ATOMIC_COUNTER_FOR_CREATE
 
-puts "Phase 4 --- Get 300,000 items, Get & Replace 200,000 items... Read 60%, Write 40%"
+puts "Phase 4 --- Read  60%, Write  40% --- Get 300,000 items, Get & Replace 200,000 items..."
 100000.times do |i|
   key = "item::#{rand(current_count) + 1}"
   data = C.get(key)
@@ -212,7 +212,7 @@ end
 current_count = C.get("itemcount") if USE_ATOMIC_COUNTER_FOR_CREATE
 current_count = 300000 unless USE_ATOMIC_COUNTER_FOR_CREATE
 
-puts "Phase 5 --- Get 500,000 items... Read 100%, Write 0%"
+puts "Phase 5 --- Read 100%, Write   0% --- Get 500,000 items..."
 500000.times do |i|
   key = "item::#{rand(current_count) + 1}"
   data = C.get(key)
