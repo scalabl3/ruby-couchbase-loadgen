@@ -21,7 +21,7 @@ $ ruby load.rb
 ```
 
 * You can open multiple terminals and do this since each ruby run is single threaded process
-* There are only so many operations a single thread/process can generate, so multiple simultaneous runs are needed
+* There are only so many operations a single thread/process can generate, so multiple simultaneous runs are needed to generate higher loads, I do one per core max
 
 Clear out the default bucket between runs
 
