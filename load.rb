@@ -130,7 +130,7 @@ end
 current_count = C.get("itemcount") if USE_ATOMIC_COUNTER_FOR_CREATE
 current_count = 200000 unless USE_ATOMIC_COUNTER_FOR_CREATE
 
-puts "Phase 3 --- Read  33%, Write  66% --- Get 100,000 items, Get & Replace 100,000 items, Create 100,000 items..."
+puts "Phase 3 --- Read  33%, Write  66% --- Create 100,000 items, Get 100,000 items, Get & Replace 100,000 items..."
 100000.times do |i|
 
   key = "item::#{rand(current_count) + 1}"
