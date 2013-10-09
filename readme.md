@@ -8,7 +8,7 @@
 
 **On Mac**:
   Make sure you have XCode, Command Line Tools installed/up to date, and
-  Make sure you have Homebrew installed and up to date.
+  Make sure you have Homebrew installed and up to date (``$ brew update;brew upgrade;brew doctor``).
   
 **On Windows**:
   Follow instructions on the couchbase communities site for the c library that matches your configuration.
