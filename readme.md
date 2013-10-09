@@ -2,9 +2,9 @@
 
 **Pre-Requisite**: Install [Couchbase Server 2.2 Enterprise](http://www.couchbase.com/download) on your machine, then.. 
 
-* First, you need a working Ruby environment, follow instructions on rvm.io
+* First, you need a working Ruby environment, follow instructions on http://rvm.io/
 * Second, install the libcouchbase c library (www.couchbase.com/communities/c/getting-started)
-* Third, install the Ruby couchbase gem (gem install couchbase), and json libraries if you don't have them (gem install json multi_json)
+* Third, install the Ruby couchbase gem and json libraries (gem install json multi_json couchbase)
 
 **On Mac**:
   Make sure you have XCode, Command Line Tools installed/up to date, and
