@@ -1,6 +1,6 @@
 #Using the Ruby based load test is easy!#
 
-**Pre-Requisite**: Install Couchbase Server 2.2 Enterprise on your machine, then.. http://www.couchbase.com/download
+**Pre-Requisite**: Install [Couchbase Server 2.2 Enterprise](http://www.couchbase.com/download) on your machine, then.. 
 
 * First, you need a working Ruby environment, follow instructions on rvm.io
 * Second, install the libcouchbase c library (www.couchbase.com/communities/c/getting-started)
