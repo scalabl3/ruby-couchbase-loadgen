@@ -1,10 +1,10 @@
-*Using the Ruby based load test is easy!*
+#Using the Ruby based load test is easy!#
 
 Pre-Requisite: Install Couchbase Server 2.2 Enterprise on your machine, then.. 
 
-# First you need a working Ruby environment, follow instructions on rvm.io
-# Second install the libcouchbase c library (www.couchbase.com/communities/c/getting-started)
-# Third install the Ruby couchbase gem (gem install couchbase), and json libraries if you don't have them (gem install json multi_json)
+* First you need a working Ruby environment, follow instructions on rvm.io
+* Second install the libcouchbase c library (www.couchbase.com/communities/c/getting-started)
+* Third install the Ruby couchbase gem (gem install couchbase), and json libraries if you don't have them (gem install json multi_json)
 
 On Mac:
   Make sure you have XCode, Command Line Tools installed/up to date
